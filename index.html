@@ -8,849 +8,273 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-            --gray-100: #f5f5f5;
-            --gray-200: #e5e5e5;
-            --gray-300: #d4d4d4;
-            --gray-400: #a3a3a3;
-            --gray-500: #737373;
-            --gray-600: #525252;
-            --gray-700: #404040;
-            --gray-800: #262626;
-            --gray-900: #171717;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Work Sans', sans-serif;
-            background: var(--black);
-            color: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--black);
-            border-bottom: 1px solid var(--gray-800);
-            z-index: 1000;
-            padding: 1.25rem 0;
-        }
-
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            color: var(--white);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--gray-400);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 400;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--white);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            background: linear-gradient(to bottom, var(--black) 0%, var(--gray-900) 100%);
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: clamp(2.5rem, 7vw, 5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .hero .tagline {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            color: var(--gray-400);
-            margin-bottom: 3rem;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            letter-spacing: 0.02em;
-            cursor: pointer;
-            border: 1px solid;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--white);
-            color: var(--black);
-            border-color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background: var(--gray-200);
-            border-color: var(--gray-200);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border-color: var(--white);
-        }
-
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .section-header h2 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--gray-400);
-            line-height: 1.7;
-        }
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-text {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: var(--gray-300);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: var(--gray-900);
-            padding: 2rem;
-            border: 1px solid var(--gray-800);
-            text-align: center;
-            transition: border-color 0.2s ease;
-        }
-
-        .stat-card:hover {
-            border-color: var(--gray-600);
-        }
-
-        .stat-number {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--white);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--gray-400);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        /* Season Section */
-        .season-content {
-            background: var(--gray-900);
-            padding: 4rem;
-            border: 1px solid var(--gray-800);
-        }
-
-        .season-title {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            letter-spacing: -0.02em;
-        }
-
-        .season-description {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: var(--gray-300);
-            margin-bottom: 3rem;
-        }
-
-        .program-list {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .program-item {
-            padding: 2rem 0;
-            border-top: 1px solid var(--gray-800);
-        }
-
-        .program-item:first-child {
-            border-top: none;
-        }
-
-        .program-item h3 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 1.75rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .program-item .composer {
-            font-size: 1rem;
-            color: var(--gray-400);
-            margin-bottom: 1rem;
-            font-style: italic;
-        }
-
-        .program-item p {
-            color: var(--gray-300);
-            line-height: 1.8;
-        }
-
-        /* Guest Artist Section */
-        .guest-artist {
-            margin-top: 4rem;
-            padding: 3rem 0;
-            border-top: 1px solid var(--gray-800);
-        }
-
-        .artist-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .artist-header h3 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .artist-header .role {
-            font-size: 1rem;
-            color: var(--gray-400);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .artist-bio {
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--gray-300);
-            line-height: 1.8;
-        }
-
-        .artist-bio p {
-            margin-bottom: 1.25rem;
-        }
-
-        /* Musicians Section */
-        .musicians-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .musician-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--gray-900);
-            border: 1px solid var(--gray-800);
-            transition: border-color 0.2s ease;
-        }
-
-        .musician-card:hover {
-            border-color: var(--gray-600);
-        }
-
-        .musician-card h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .musician-card .instrument {
-            font-size: 0.9rem;
-            color: var(--gray-400);
-        }
-
-        /* Auditions Section */
-        .auditions {
-            background: var(--gray-900);
-            border: 1px solid var(--gray-700);
-            padding: 4rem;
-            text-align: center;
-        }
-
-        .auditions h2 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-        }
-
-        .auditions > p {
-            font-size: 1.1rem;
-            color: var(--gray-400);
-            margin-bottom: 3rem;
-        }
-
-        .openings-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-            text-align: left;
-        }
-
-        .opening-card {
-            background: var(--black);
-            padding: 2rem;
-            border: 1px solid var(--gray-800);
-        }
-
-        .opening-card h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .opening-card ul {
-            list-style: none;
-            color: var(--gray-400);
-        }
-
-        .opening-card li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.25rem;
-            position: relative;
-        }
-
-        .opening-card li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-        }
-
-        .audition-info {
-            margin: 2rem 0;
-            padding: 2rem;
-            background: var(--black);
-            border: 1px solid var(--gray-800);
-            text-align: left;
-        }
-
-        .audition-info p {
-            color: var(--gray-300);
-            line-height: 1.8;
-        }
-
-        /* Conductor Bio Section */
-        .conductor-bio {
-            padding: 6rem 2rem;
-            background: var(--gray-900);
-        }
-
-        .bio-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .bio-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .bio-header h2 {
-            font-family: 'Libre Baskerville', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 0.75rem;
-            letter-spacing: -0.02em;
-        }
-
-        .bio-header .title {
-            font-size: 1.1rem;
-            color: var(--gray-400);
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .bio-content {
-            color: var(--gray-300);
-            line-height: 1.9;
-            font-size: 1.05rem;
-        }
-
-        .bio-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--black);
-            padding: 4rem 2rem;
-            border-top: 1px solid var(--gray-800);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        footer p {
-            color: var(--gray-400);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--gray-400);
-            text-decoration: none;
-            transition: color 0.2s ease;
-            font-size: 0.95rem;
-        }
-
-        .social-links a:hover {
-            color: var(--white);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--black);
-                padding: 2rem;
-                border-bottom: 1px solid var(--gray-800);
-            }
-
-            .nav-links.active {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .openings-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .season-content {
-                padding: 2rem;
-            }
-
-            .auditions {
-                padding: 2rem;
-            }
-
-            .conductor-bio {
-                padding: 4rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            nav {
-                padding: 0 1rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem;
-            }
-
-            .hero {
-                padding: 6rem 1.5rem 4rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .musicians-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-        }
+        :root { --black:#000; --white:#fff; --gray-300:#d4d4d4; --gray-400:#a3a3a3; --gray-600:#525252; --gray-700:#404040; --gray-800:#262626; --gray-900:#171717; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Work Sans',sans-serif; background:var(--black); color:var(--white); line-height:1.6; overflow-x:hidden; }
+        html { scroll-behavior:smooth; }
+
+        /* HEADER */
+        header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.95); border-bottom:1px solid var(--gray-800); z-index:1000; padding:1.25rem 0; }
+        nav { max-width:1400px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
+        .logo { font-size:1.25rem; font-weight:600; letter-spacing:-0.02em; color:var(--white); text-decoration:none; }
+        .nav-links { display:flex; gap:2rem; list-style:none; }
+        .nav-links a { color:var(--gray-400); text-decoration:none; font-size:0.95rem; transition:color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color:var(--white); }
+        .mobile-menu-btn { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer; }
+
+        /* HERO */
+        .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:8rem 2rem 4rem; position:relative; overflow:hidden; }
+        .hero-bg { position:absolute; inset:0; background-image:url('https://placehold.co/1920x1080/1a1a1a/555555?text=↑+REPLACE+WITH+YOUR+ORCHESTRA+PHOTO'); background-size:cover; background-position:center; }
+        .hero-bg::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.65); }
+        .hero-content { position:relative; z-index:1; max-width:900px; }
+        .hero h1 { font-family:'Libre Baskerville',serif; font-size:clamp(2.5rem,7vw,5rem); font-weight:700; line-height:1.1; margin-bottom:1.5rem; letter-spacing:-0.02em; }
+        .hero .tagline { font-size:clamp(1rem,2vw,1.25rem); color:var(--gray-300); margin-bottom:3rem; letter-spacing:0.05em; text-transform:uppercase; }
+        .cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+        /* BUTTONS */
+        .btn { padding:1rem 2rem; font-size:0.95rem; font-weight:500; text-decoration:none; transition:all 0.2s; letter-spacing:0.02em; cursor:pointer; border:1px solid; display:inline-block; font-family:'Work Sans',sans-serif; }
+        .btn-primary { background:var(--white); color:var(--black); border-color:var(--white); }
+        .btn-primary:hover { background:#e5e5e5; }
+        .btn-secondary { background:transparent; color:var(--white); border-color:var(--white); }
+        .btn-secondary:hover { background:var(--white); color:var(--black); }
+
+        /* SECTIONS */
+        section { padding:6rem 2rem; max-width:1400px; margin:0 auto; }
+        .section-header { text-align:center; margin-bottom:4rem; max-width:800px; margin-left:auto; margin-right:auto; }
+        .section-header h2 { font-family:'Libre Baskerville',serif; font-size:clamp(2rem,4vw,3rem); font-weight:700; margin-bottom:1rem; letter-spacing:-0.02em; }
+        .section-header p { font-size:1.1rem; color:var(--gray-400); line-height:1.7; }
+
+        /* ABOUT */
+        .about-content { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; }
+        .about-text { font-size:1.05rem; line-height:1.8; color:var(--gray-300); }
+        .about-text p { margin-bottom:1.5rem; }
+        .stats-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+        .stat-card { background:var(--gray-900); padding:2rem; border:1px solid var(--gray-800); text-align:center; transition:border-color 0.2s; }
+        .stat-card:hover { border-color:var(--gray-600); }
+        .stat-number { font-family:'Libre Baskerville',serif; font-size:3rem; font-weight:700; display:block; margin-bottom:0.5rem; }
+        .stat-label { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.1em; text-transform:uppercase; }
+
+        /* BRANDON PREVIEW */
+        .conductor-preview { background:var(--gray-900); border:1px solid var(--gray-800); display:grid; grid-template-columns:350px 1fr; overflow:hidden; }
+        .conductor-photo { background-image:url('https://placehold.co/350x500/262626/666666?text=BRANDON+MADRID+PHOTO'); background-size:cover; background-position:center top; min-height:450px; }
+        .conductor-info { padding:3rem; display:flex; flex-direction:column; justify-content:center; }
+        .conductor-info .eyebrow { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+        .conductor-info h2 { font-family:'Libre Baskerville',serif; font-size:2.5rem; margin-bottom:0.5rem; letter-spacing:-0.02em; }
+        .conductor-info .role { font-size:1rem; color:var(--gray-400); margin-bottom:2rem; }
+        .conductor-info p { color:var(--gray-300); line-height:1.8; margin-bottom:1.25rem; font-size:1.05rem; }
+
+        /* MUSICIANS PREVIEW */
+        .musicians-preview { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+        .musician-preview-card { background:var(--gray-900); border:1px solid var(--gray-800); overflow:hidden; cursor:pointer; transition:border-color 0.2s; text-decoration:none; color:var(--white); display:block; }
+        .musician-preview-card:hover { border-color:var(--gray-600); }
+        .musician-photo { width:100%; aspect-ratio:1; background-size:cover; background-position:center top; }
+        .musician-card-info { padding:1.25rem; }
+        .musician-card-info h4 { font-size:1.05rem; font-weight:600; margin-bottom:0.3rem; }
+        .musician-card-info p { font-size:0.9rem; color:var(--gray-400); }
+
+        /* SEASON */
+        .season-content { background:var(--gray-900); padding:4rem; border:1px solid var(--gray-800); }
+        .season-description { font-size:1.05rem; line-height:1.9; color:var(--gray-300); margin-bottom:3rem; }
+        .program-item { padding:2rem 0; border-top:1px solid var(--gray-800); }
+        .program-item h3 { font-family:'Libre Baskerville',serif; font-size:1.75rem; margin-bottom:0.5rem; }
+        .program-item .composer { font-size:1rem; color:var(--gray-400); margin-bottom:1rem; font-style:italic; }
+        .program-item p { color:var(--gray-300); line-height:1.8; }
+
+        /* AUDITIONS */
+        .auditions { background:var(--gray-900); border:1px solid var(--gray-700); padding:4rem; text-align:center; }
+        .auditions h2 { font-family:'Libre Baskerville',serif; font-size:2.5rem; margin-bottom:1rem; }
+        .auditions > p { font-size:1.1rem; color:var(--gray-400); margin-bottom:3rem; }
+        .openings-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2rem; margin:3rem 0; text-align:left; }
+        .opening-card { background:var(--black); padding:2rem; border:1px solid var(--gray-800); }
+        .opening-card h4 { font-size:1.25rem; font-weight:600; margin-bottom:1rem; }
+        .opening-card ul { list-style:none; color:var(--gray-400); }
+        .opening-card li { margin-bottom:0.5rem; padding-left:1.25rem; position:relative; }
+        .opening-card li::before { content:'•'; position:absolute; left:0; }
+        .audition-info { margin:2rem 0; padding:2rem; background:var(--black); border:1px solid var(--gray-800); text-align:left; }
+        .audition-info p { color:var(--gray-300); line-height:1.8; }
+
+        /* FOOTER */
+        footer { background:var(--black); padding:4rem 2rem; border-top:1px solid var(--gray-800); }
+        .footer-content { max-width:1400px; margin:0 auto; text-align:center; }
+        footer p { color:var(--gray-400); margin-bottom:0.5rem; font-size:0.95rem; }
+        .social-links { display:flex; gap:2rem; justify-content:center; margin-top:2rem; }
+        .social-links a { color:var(--gray-400); text-decoration:none; transition:color 0.2s; font-size:0.95rem; }
+        .social-links a:hover { color:var(--white); }
+
+        /* RESPONSIVE */
+        @media(max-width:1024px){ .musicians-preview{grid-template-columns:repeat(2,1fr);} }
+        @media(max-width:968px){
+            .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--black);padding:2rem;border-bottom:1px solid var(--gray-800);flex-direction:column;gap:1.5rem;}
+            .nav-links.active{display:flex;}
+            .mobile-menu-btn{display:block;}
+            .about-content{grid-template-columns:1fr;}
+            .conductor-preview{grid-template-columns:1fr;}
+            .conductor-photo{min-height:300px;aspect-ratio:16/9;}
+            .season-content,.auditions{padding:2rem;}
+        }
+        @media(max-width:640px){ section{padding:4rem 1.5rem;} .musicians-preview{grid-template-columns:repeat(2,1fr);} }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">SoCal Music Collective</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#season">2026 Season</a></li>
-                <li><a href="#brandon">Brandon Madrid</a></li>
-                <li><a href="watch-listen.html">Watch & Listen</a></li>
-                <li><a href="#auditions">Auditions</a></li>
-            </ul>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Where Musicians Become Artists</h1>
-            <p class="tagline">Excellence in Wind Ensemble Performance</p>
-            <div class="cta-buttons">
-                <a href="#auditions" class="btn btn-primary">Audition Now</a>
-                <a href="#season" class="btn btn-secondary">Explore 2026 Season</a>
-            </div>
+<header>
+    <nav>
+        <!-- LOGO — swap text for <img src="YOUR-LOGO-URL"> once ready -->
+        <a href="index.html" class="logo">SoCal Music Collective</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#season">2026 Season</a></li>
+            <li><a href="brandon-madrid.html">Brandon Madrid</a></li>
+            <li><a href="musicians.html">Musicians</a></li>
+            <li><a href="watch-listen.html">Watch & Listen</a></li>
+            <li><a href="#auditions">Auditions</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </nav>
+</header>
+
+<!-- HERO — replace photo URL with your orchestra image -->
+<div class="hero">
+    <div class="hero-bg" style="background-image:url('https://placehold.co/1920x1080/1a1a1a/555555?text=REPLACE+WITH+ORCHESTRA+PHOTO');"></div>
+    <div class="hero-content">
+        <h1>Where Musicians Become Artists</h1>
+        <p class="tagline">Excellence in Wind Ensemble Performance</p>
+        <div class="cta-buttons">
+            <a href="#auditions" class="btn btn-primary">Audition Now</a>
+            <a href="#season" class="btn btn-secondary">Explore 2026 Season</a>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="section-header">
-            <h2>About the Collective</h2>
-            <p>A vibrant community of dedicated musicians pursuing excellence in wind performance</p>
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-header">
+        <h2>About the Collective</h2>
+        <p>A vibrant community of dedicated musicians pursuing excellence in wind performance</p>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>In Spring 2025, Brandon Madrid founded the SoCal Music Collective with a bold vision: to create a space where musicians could challenge themselves, grow, and ultimately become the best artists they can be.</p>
+            <p>What began as an opportunity for Brandon to gain conducting experience quickly evolved into a collaborative community built on passion, mentorship, and a shared love for music. Our debut concert, Legacy, reflected this spirit—honoring the music and leaders who've shaped us while paving the way for new voices to rise.</p>
+            <p>The SoCal Music Collective brings together handpicked musicians from across California and beyond, each selected for their artistry and dedication. Together, we celebrate the beauty of instrumental music and deepen our connection to its rich traditions.</p>
         </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>In Spring 2025, Brandon Madrid founded the SoCal Music Collective with a bold vision: to create a space where musicians could challenge themselves, grow, and ultimately become the best artists they can be.</p>
-                <p>What began as an opportunity for Brandon to gain conducting experience quickly evolved into a collaborative community built on passion, mentorship, and a shared love for music. Our debut concert, Legacy, reflected this spirit—honoring the music and leaders who've shaped us while paving the way for new voices to rise.</p>
-                <p>The SoCal Music Collective brings together handpicked musicians from across California and beyond, each selected for their artistry and dedication. Together, we celebrate the beauty of instrumental music and deepen our connection to its rich traditions through collaboration, passion, and an unwavering pursuit of excellence.</p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Musicians</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">2</span>
-                    <span class="stat-label">Seasons</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Institutions</span>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-number">∞</span>
-                    <span class="stat-label">Passion</span>
-                </div>
-            </div>
+        <div class="stats-grid">
+            <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">Musicians</span></div>
+            <div class="stat-card"><span class="stat-number">2</span><span class="stat-label">Seasons</span></div>
+            <div class="stat-card"><span class="stat-number">10+</span><span class="stat-label">Institutions</span></div>
+            <div class="stat-card"><span class="stat-number">SoCal</span><span class="stat-label">Based</span></div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Season Section -->
-    <section id="season">
-        <div class="section-header">
-            <h2>Echoes — 2026 Season</h2>
-            <p>Moments, emotions, and memories that resonate through time and sound</p>
+<!-- BRANDON PREVIEW — replace photo URL -->
+<section style="padding-top:0;">
+    <div class="conductor-preview">
+        <div class="conductor-photo" style="background-image:url('https://placehold.co/350x500/262626/666666?text=BRANDON+MADRID+PHOTO');"></div>
+        <div class="conductor-info">
+            <p class="eyebrow">Founder & Music Director</p>
+            <h2>Brandon Madrid</h2>
+            <p class="role">SoCal Music Collective</p>
+            <p>Brandon Madrid founded the SoCal Music Collective in Spring 2025 with a bold vision: to create a space where musicians could challenge themselves, grow, and ultimately become the best artists they can be.</p>
+            <p>Through the SoCal Music Collective, Brandon is not only carving out his path as a conductor but building a space where musicians can develop their artistry and connect deeply with the rich traditions of wind ensemble performance.</p>
+            <a href="brandon-madrid.html" class="btn btn-secondary" style="margin-top:0.5rem;align-self:flex-start;">Full Biography</a>
         </div>
-        <div class="season-content">
-            <p class="season-description">
-                Our 2026 season follows last year's powerful debut of Legacy, a program that explored how music can preserve, honor, and celebrate what we leave behind. This year, we extend that vision with Echoes—a season centered on the idea that certain moments, emotions, and memories don't simply pass… they resonate. They ripple. They echo—through people, through time, and through sound itself.
-            </p>
+    </div>
+</section>
 
-            <div class="program-list">
-                <div class="program-item">
-                    <h3>Saisei Fanfare</h3>
-                    <p class="composer">Timothy Mahr</p>
-                    <p>A triumphant and heartfelt celebration. Its title, "Saisei," meaning "rebirth" or "resurgence," reminds us that beginnings are never just beginnings—they are echoes of those who came before. Through vibrant brass and soaring textures, the piece pays tribute to the way musical lineage is passed down through generations of educators, mentors, and students, each one continuing the song.</p>
-                </div>
+<!-- MUSICIANS PREVIEW — replace photo URLs and names -->
+<section>
+    <div class="section-header">
+        <h2>Meet the Musicians</h2>
+        <p>Talented artists from across California and beyond</p>
+    </div>
+    <div class="musicians-preview">
+        <a href="musicians.html" class="musician-preview-card">
+            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
+            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
+        </a>
+        <a href="musicians.html" class="musician-preview-card">
+            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
+            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
+        </a>
+        <a href="musicians.html" class="musician-preview-card">
+            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
+            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
+        </a>
+        <a href="musicians.html" class="musician-preview-card">
+            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
+            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
+        </a>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+        <a href="musicians.html" class="btn btn-secondary">View All Musicians</a>
+    </div>
+</section>
 
-                <div class="program-item">
-                    <h3>Flying Jewels</h3>
-                    <p class="composer">Frank Ticheli</p>
-                    <p>A symphonic poem that imagines the connection we all have as living beings. With dazzling colors and breathless motion, it paints the emotional connections between beings—how one spirit can reflect, touch, or resonate with another. In its vibrant fluttering, we hear the heartbeat of empathy, memory, and transformation.</p>
-                </div>
-
-                <div class="program-item">
-                    <h3>Goodnight Moon</h3>
-                    <p class="composer">Eric Whitacre • Text by Margaret Wise Brown</p>
-                    <p>A haunting arrangement for soprano and wind ensemble. This setting of the beloved children's book invites us into the echo chamber of childhood itself—a world of lullabies, whispered dreams, and quiet wonder. Through this gentle, dreamlike music, Whitacre reveals how even our earliest memories continue to sing softly within us, no matter how far we grow from them.</p>
-                </div>
-            </div>
-
-            <!-- Guest Artist -->
-            <div class="guest-artist">
-                <div class="artist-header">
-                    <h3>Erin Ellysha</h3>
-                    <p class="role">Guest Soprano</p>
-                </div>
-                <div class="artist-bio">
-                    <p>Erin Ellysha is an accomplished vocalist and passionate performer from Southern California, whose musical experience spans over a decade of dedicated choral work.</p>
-                    <p>While studying at the University of California, Irvine, Erin immersed herself in both the Theatre Department and the Vocal Performance program, graduating in 2024. As former board and Assistant Music Director of UCI's nationally recognized a cappella group, Vermillion Vocalists, her voice was featured on multiple award-winning recordings.</p>
-                    <p>Now based near Denver, Colorado, Erin is pursuing a degree in Music at the University of Colorado, Denver, where she continues to refine her artistry and share her voice with new communities.</p>
-                </div>
-            </div>
+<!-- 2026 SEASON -->
+<section id="season">
+    <div class="section-header">
+        <h2>Echoes — 2026 Season</h2>
+        <p>Moments, emotions, and memories that resonate through time and sound</p>
+    </div>
+    <div class="season-content">
+        <p class="season-description">Our 2026 season follows last year's powerful debut of Legacy. This year, we extend that vision with Echoes—a season centered on the idea that certain moments, emotions, and memories don't simply pass… they resonate. They ripple. They echo—through people, through time, and through sound itself.</p>
+        <div class="program-item">
+            <h3>Saisei Fanfare</h3>
+            <p class="composer">Timothy Mahr</p>
+            <p>A triumphant and heartfelt celebration. "Saisei," meaning "rebirth" or "resurgence," reminds us that beginnings are echoes of those who came before. Through vibrant brass and soaring textures, the piece pays tribute to how musical lineage is passed down through generations.</p>
         </div>
-    </section>
-
-    <!-- Brandon Madrid Bio Section -->
-    <section id="brandon" class="conductor-bio">
-        <div class="bio-container">
-            <div class="bio-header">
-                <h2>Brandon Madrid</h2>
-                <p class="title">Founder & Music Director</p>
-            </div>
-            <div class="bio-content">
-                <p>Brandon Madrid is a passionate conductor and music educator dedicated to creating transformative musical experiences. In Spring 2025, he founded the SoCal Music Collective with a bold vision: to create a space where musicians could challenge themselves, grow, and ultimately become the best artists they can be.</p>
-                <p>What began as an opportunity for Brandon to gain conducting experience quickly evolved into a collaborative community built on passion, mentorship, and a shared love for music. The ensemble's debut concert, Legacy, reflected this spirit—honoring the music and leaders who've shaped us while paving the way for new voices to rise.</p>
-                <p>Through the SoCal Music Collective, Brandon is not only carving out his path as a conductor but building a space where musicians can develop their artistry, collaborate meaningfully, and connect deeply with the rich traditions of wind ensemble performance. His leadership style emphasizes mentorship, artistic growth, and the belief that music has the power to unite and inspire.</p>
-            </div>
+        <div class="program-item">
+            <h3>Flying Jewels</h3>
+            <p class="composer">Frank Ticheli</p>
+            <p>A symphonic poem imagining the connection we all share as living beings. With dazzling colors and breathless motion, it paints the emotional connections between beings—how one spirit can reflect, touch, or resonate with another.</p>
         </div>
-    </section>
-
-    <!-- Musicians Section -->
-    <section id="musicians">
-        <div class="section-header">
-            <h2>Meet the Musicians</h2>
-            <p>Talented artists from across California and beyond</p>
+        <div class="program-item">
+            <h3>Goodnight Moon</h3>
+            <p class="composer">Eric Whitacre • Text by Margaret Wise Brown</p>
+            <p>A haunting arrangement for soprano and wind ensemble featuring guest soprano Erin Ellysha. This gentle, dreamlike music reveals how our earliest memories continue to sing softly within us.</p>
         </div>
-        <div class="musicians-grid">
-            <!-- Sample musicians - you can add more -->
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Bb Clarinet</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Bb Clarinet</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Bb Clarinet</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Bari Saxophone</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Trumpet</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Trumpet</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Percussion</p>
-            </div>
-            <div class="musician-card">
-                <h4>Available</h4>
-                <p class="instrument">Percussion</p>
-            </div>
+    </div>
+</section>
+
+<!-- AUDITIONS -->
+<section id="auditions">
+    <div class="auditions">
+        <h2>2026 Season Auditions Open</h2>
+        <p>Join a community of passionate musicians dedicated to excellence</p>
+        <div class="openings-grid">
+            <div class="opening-card"><h4>Woodwinds</h4><ul><li>Bb Clarinet (3)</li><li>Bari Saxophone (1)</li></ul></div>
+            <div class="opening-card"><h4>Brass</h4><ul><li>Trumpet (2)</li></ul></div>
+            <div class="opening-card"><h4>Percussion</h4><ul><li>Percussionists (1–3)</li><li>Auxiliary & Cymbals</li><li>Concert Percussion</li></ul></div>
         </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <p style="color: var(--gray-400); margin-bottom: 2rem;">View complete roster for 2025 and 2026 seasons</p>
-            <a href="#auditions" class="btn btn-secondary">Join Our Ensemble</a>
+        <div class="audition-info">
+            <p>Rehearsals take place in Newport Beach with flexible scheduling to accommodate both student and professional musicians. We seek performers comfortable with collegiate-level repertoire who are eager to grow individually and as part of a collaborative ensemble.</p>
         </div>
-    </section>
-
-    <!-- Auditions Section -->
-    <section id="auditions">
-        <div class="auditions">
-            <h2>2026 Season Auditions Open</h2>
-            <p>Join a community of passionate musicians dedicated to excellence</p>
-
-            <div class="openings-grid">
-                <div class="opening-card">
-                    <h4>Woodwinds</h4>
-                    <ul>
-                        <li>Bb Clarinet (3)</li>
-                        <li>Bari Saxophone (1)</li>
-                    </ul>
-                </div>
-                <div class="opening-card">
-                    <h4>Brass</h4>
-                    <ul>
-                        <li>Trumpet (2)</li>
-                    </ul>
-                </div>
-                <div class="opening-card">
-                    <h4>Percussion</h4>
-                    <ul>
-                        <li>Percussionists (1-3)</li>
-                        <li>Auxiliary & Cymbals</li>
-                        <li>Concert Percussion</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="audition-info">
-                <p>Rehearsals take place in Newport Beach with flexible scheduling to accommodate both student and professional musicians. We seek performers comfortable with collegiate-level repertoire who are eager to grow individually and as part of a collaborative ensemble.</p>
-            </div>
-
-            <div class="cta-buttons">
-                <a href="https://forms.gle/JZUCfNkNKNBA1wdb8" class="btn btn-primary" target="_blank">Interest Form</a>
-                <a href="https://forms.gle/637M6QUsM5JtghYW8" class="btn btn-secondary" target="_blank">Audition Form</a>
-            </div>
+        <div class="cta-buttons">
+            <a href="https://forms.gle/JZUCfNkNKNBA1wdb8" class="btn btn-primary" target="_blank">Interest Form</a>
+            <a href="https://forms.gle/637M6QUsM5JtghYW8" class="btn btn-secondary" target="_blank">Audition Form</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2026 SoCal Music Collective. All rights reserved.</p>
-            <p>Founded by Brandon Madrid • Newport Beach, California</p>
-            <div class="social-links">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">YouTube</a>
-            </div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 SoCal Music Collective. All rights reserved.</p>
+        <p>Founded by Brandon Madrid • Newport Beach, California</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navItems = document.querySelectorAll('.nav-links a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.scrollY >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href').slice(1) === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
+<script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const nav = document.getElementById('navLinks');
+    btn.addEventListener('click', () => nav.classList.toggle('active'));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('active')));
+</script>
 </body>
 </html>
