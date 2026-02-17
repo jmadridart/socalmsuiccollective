@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musicians | SoCal Music Collective</title>
+    <title>Meet the Musicians | SoCal Music Collective</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,53 +26,18 @@
 
         .content { max-width:1400px; margin:0 auto; padding:4rem 2rem; }
 
-        /* SECTION LABEL */
         .section-label { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; padding:2rem 0 1rem; border-top:2px solid var(--white); margin-top:3rem; margin-bottom:2rem; }
         .section-label:first-child { margin-top:0; border-top:none; }
 
-        /* MUSICIANS GRID */
         .musicians-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:2rem; margin-bottom:3rem; }
 
-        /* MUSICIAN CARD - clickable, opens bio overlay */
-        .musician-card {
-            background:var(--gray-900);
-            border:1px solid var(--gray-800);
-            overflow:hidden;
-            cursor:pointer;
-            transition:border-color 0.2s;
-            text-decoration:none;
-            color:var(--white);
-            display:block;
-        }
+        .musician-card { background:var(--gray-900); border:1px solid var(--gray-800); overflow:hidden; transition:border-color 0.2s; }
         .musician-card:hover { border-color:var(--gray-600); }
-        /* REPLACE each photo URL with your musician's headshot */
-        .musician-card-photo { width:100%; aspect-ratio:3/4; background-size:cover; background-position:center top; }
+        .musician-card-photo { width:100%; aspect-ratio:3/4; background:#262626; background-size:cover; background-position:center top; }
         .musician-card-info { padding:1.25rem; }
         .musician-card-info h3 { font-size:1.1rem; font-weight:600; margin-bottom:0.3rem; }
         .musician-card-info .instrument { font-size:0.9rem; color:var(--gray-400); margin-bottom:0.3rem; }
         .musician-card-info .school { font-size:0.85rem; color:var(--gray-600); }
-
-        /* BIO OVERLAY */
-        .bio-overlay { display:none; position:fixed; inset:0; z-index:2000; background:rgba(0,0,0,0.92); overflow-y:auto; }
-        .bio-overlay.active { display:flex; align-items:flex-start; justify-content:center; padding:2rem; }
-        .bio-modal {
-            background:var(--gray-900);
-            border:1px solid var(--gray-700);
-            max-width:900px;
-            width:100%;
-            margin-top:4rem;
-            display:grid;
-            grid-template-columns:280px 1fr;
-            overflow:hidden;
-        }
-        .bio-modal-photo { background-size:cover; background-position:center top; min-height:400px; }
-        .bio-modal-content { padding:3rem; }
-        .bio-modal-content .eyebrow { font-size:0.8rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem; }
-        .bio-modal-content h2 { font-family:'Libre Baskerville',serif; font-size:2rem; margin-bottom:0.5rem; }
-        .bio-modal-content .role { color:var(--gray-400); margin-bottom:2rem; }
-        .bio-modal-content p { color:var(--gray-300); line-height:1.8; margin-bottom:1.25rem; }
-        .close-btn { background:none; border:1px solid var(--gray-700); color:var(--white); padding:0.75rem 1.5rem; cursor:pointer; font-family:'Work Sans',sans-serif; font-size:0.95rem; margin-top:1rem; transition:all 0.2s; }
-        .close-btn:hover { background:var(--white); color:var(--black); }
 
         footer { background:var(--black); padding:4rem 2rem; border-top:1px solid var(--gray-800); }
         .footer-content { max-width:1400px; margin:0 auto; text-align:center; }
@@ -85,8 +50,6 @@
             .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--black);padding:2rem;border-bottom:1px solid var(--gray-800);flex-direction:column;gap:1.5rem;}
             .nav-links.active{display:flex;}
             .mobile-menu-btn{display:block;}
-            .bio-modal{grid-template-columns:1fr;}
-            .bio-modal-photo{min-height:250px;aspect-ratio:16/9;}
         }
         @media(max-width:640px){
             .musicians-grid{grid-template-columns:repeat(2,1fr);}
@@ -114,98 +77,415 @@
 
 <div class="page-header">
     <h1>Meet the Musicians</h1>
-    <p>The talented artists of the SoCal Music Collective — click any musician to learn more</p>
+    <p>The talented artists of the SoCal Music Collective — 2026 Season</p>
 </div>
 
 <div class="content">
 
-    <!-- WOODWINDS -->
-    <div class="section-label">Woodwinds</div>
+    <!-- WOODWINDS - FLUTES -->
+    <div class="section-label">Flutes & Piccolo</div>
     <div class="musicians-grid">
-        <!-- Each card: replace photo URL, name, instrument, school, and bio text -->
-        <div class="musician-card" onclick="openBio('flute1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
+                <h3>Jorden Enderton</h3>
+                <p class="instrument">Flute (Principal)</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Daniel Chavez</h3>
+                <p class="instrument">Flute/Piccolo (Asst. Principal)</p>
+                <p class="school">Cal State Long Beach</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Dayoung Kang</h3>
                 <p class="instrument">Flute</p>
-                <p class="school">University Name</p>
+                <p class="school">Irvine Valley College / Juilliard</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('flute2')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
+                <h3>Sarah Erickson</h3>
                 <p class="instrument">Flute</p>
-                <p class="school">University Name</p>
+                <p class="school">Cal State Long Beach</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('oboe1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Oboe</p>
-                <p class="school">University Name</p>
+                <h3>Adiel Sanchez</h3>
+                <p class="instrument">Flute</p>
+                <p class="school">Cal State Long Beach</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('clar1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Bb Clarinet</p>
-                <p class="school">University Name</p>
+                <h3>Rafa Toledo</h3>
+                <p class="instrument">Flute</p>
+                <p class="school">Irvine Valley College / SDSU</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('sax1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Alto Saxophone</p>
-                <p class="school">University Name</p>
-            </div>
-        </div>
-        <div class="musician-card" onclick="openBio('bsn1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
-            <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Bassoon</p>
-                <p class="school">University Name</p>
+                <h3>Victor Mendoza</h3>
+                <p class="instrument">Flute</p>
+                <p class="school">Irvine Valley College</p>
             </div>
         </div>
     </div>
 
-    <!-- BRASS -->
-    <div class="section-label">Brass</div>
+    <!-- OBOES -->
+    <div class="section-label">Oboes & English Horn</div>
     <div class="musicians-grid">
-        <div class="musician-card" onclick="openBio('trp1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Trumpet</p>
-                <p class="school">University Name</p>
+                <h3>Landon Yanagisawa</h3>
+                <p class="instrument">Oboe (Principal)</p>
+                <p class="school">TBA</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('hn1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
+                <h3>Dorrian</h3>
+                <p class="instrument">Oboe (Asst. Principal)</p>
+                <p class="school">Cal State Long Beach</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Melissa McElroy</h3>
+                <p class="instrument">Oboe/English Horn</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CLARINETS -->
+    <div class="section-label">Clarinets</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Shyanne Crocker</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Michael Morales</h3>
+                <p class="instrument">Eb/Bb Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Yvonne Martinez</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Olivia Hirsch</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Samuel Lee</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Annabella Millard</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Riverside City College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Susan Aguilar</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Caleb Wan</h3>
+                <p class="instrument">Bb Clarinet</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Alexis Battin</h3>
+                <p class="instrument">Bass Clarinet</p>
+                <p class="school">Cal State Long Beach</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Jesse Poot-May</h3>
+                <p class="instrument">Bass Clarinet</p>
+                <p class="school">Riverside City College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Diego Esparza</h3>
+                <p class="instrument">Contra/Bass Clarinet</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BASSOONS -->
+    <div class="section-label">Bassoons</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Rekha Michael</h3>
+                <p class="instrument">Bassoon (Principal)</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Nayalín Guzmán</h3>
+                <p class="instrument">Bassoon</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Aidan Chun</h3>
+                <p class="instrument">Bassoon/Contrabassoon</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SAXOPHONES -->
+    <div class="section-label">Saxophones</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Alejandro Martinez</h3>
+                <p class="instrument">Alto Sax (Asst. Principal)</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Ella Toner</h3>
+                <p class="instrument">Soprano/Alto Sax</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Gilberto</h3>
+                <p class="instrument">Alto Sax</p>
+                <p class="school">Cal State Long Beach</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Angel De Orta</h3>
+                <p class="instrument">Tenor Sax</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Miki Bethke</h3>
+                <p class="instrument">Baritone Sax</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BRASS - FRENCH HORNS -->
+    <div class="section-label">French Horns</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Finlay Galindo</h3>
+                <p class="instrument">French Horn (Principal)</p>
+                <p class="school">Oberlin Conservatory</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Katherine Avelar</h3>
+                <p class="instrument">French Horn (Asst. Principal)</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Richard Jefferey</h3>
                 <p class="instrument">French Horn</p>
-                <p class="school">University Name</p>
+                <p class="school">Irvine Valley College</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('trb1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
+                <h3>Eduardo Godinez</h3>
+                <p class="instrument">French Horn</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Justin Nacion</h3>
+                <p class="instrument">French Horn</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Sarah Remland</h3>
+                <p class="instrument">French Horn</p>
+                <p class="school">Biola University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUMPETS -->
+    <div class="section-label">Trumpets</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Keith Ransons</h3>
+                <p class="instrument">Trumpet</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Evan Trosler</h3>
+                <p class="instrument">Trumpet</p>
+                <p class="school">TBA</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Sky Nudelman</h3>
+                <p class="instrument">Trumpet</p>
+                <p class="school">Chapman University</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Bianca Ramirez</h3>
+                <p class="instrument">Trumpet</p>
+                <p class="school">Harvard University</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Tim Heely</h3>
+                <p class="instrument">Trumpet</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TROMBONES -->
+    <div class="section-label">Trombones & Euphoniums</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>David Nguyen</h3>
+                <p class="instrument">Trombone/Bass Trombone</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Ayden D'Angelo</h3>
                 <p class="instrument">Trombone</p>
-                <p class="school">University Name</p>
+                <p class="school">Irvine Valley College</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('tba1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
+                <h3>Chris Zavala</h3>
+                <p class="instrument">Euphonium (Principal)</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Carol Keiderling</h3>
+                <p class="instrument">Euphonium (Asst. Principal)</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Dante Catalasan</h3>
+                <p class="instrument">Euphonium</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Ruben Puebla</h3>
                 <p class="instrument">Tuba</p>
-                <p class="school">University Name</p>
+                <p class="school">TBD</p>
             </div>
         </div>
     </div>
@@ -213,47 +493,122 @@
     <!-- PERCUSSION -->
     <div class="section-label">Percussion</div>
     <div class="musicians-grid">
-        <div class="musician-card" onclick="openBio('perc1')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Percussion</p>
-                <p class="school">University Name</p>
+                <h3>Geneva Daniels</h3>
+                <p class="instrument">Percussion (Principal)</p>
+                <p class="school">Cal State Fullerton</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('perc2')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Percussion</p>
-                <p class="school">University Name</p>
+                <h3>Markie Rosas</h3>
+                <p class="instrument">Percussion (Principal)</p>
+                <p class="school">Cal State Fullerton</p>
             </div>
         </div>
-        <div class="musician-card" onclick="openBio('perc3')">
-            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666666?text=PHOTO');"></div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
             <div class="musician-card-info">
-                <h3>Musician Name</h3>
-                <p class="instrument">Timpani</p>
-                <p class="school">University Name</p>
+                <h3>Daniel Banuelos</h3>
+                <p class="instrument">Percussion (Asst. Principal)</p>
+                <p class="school">Riverside City College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Andrew Alviderez</h3>
+                <p class="instrument">Percussion (Asst. Principal)</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Julie Nguyen</h3>
+                <p class="instrument">Percussion</p>
+                <p class="school">Fullerton College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Nes Amirov</h3>
+                <p class="instrument">Percussion/Timpani</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>James Machir</h3>
+                <p class="instrument">Percussion</p>
+                <p class="school">Irvine Valley College</p>
             </div>
         </div>
     </div>
 
-</div>
-
-<!-- BIO OVERLAY — pops up when you click a musician card -->
-<div class="bio-overlay" id="bioOverlay" onclick="closeBioOnBg(event)">
-    <div class="bio-modal" id="bioModal">
-        <div class="bio-modal-photo" id="bioPhoto"></div>
-        <div class="bio-modal-content">
-            <p class="eyebrow" id="bioEyebrow">Musician</p>
-            <h2 id="bioName">Name</h2>
-            <p class="role" id="bioRole">Instrument • School</p>
-            <p id="bioParagraph1"></p>
-            <p id="bioParagraph2"></p>
-            <button class="close-btn" onclick="closeBio()">← Back to Musicians</button>
+    <!-- SPECIALTY INSTRUMENTS -->
+    <div class="section-label">Piano, Harp & String Bass</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Grace Hsia</h3>
+                <p class="instrument">Piano/Keyboard (Principal)</p>
+                <p class="school">UC Irvine / IVC</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Catherine Nguyen</h3>
+                <p class="instrument">Harp (Principal)</p>
+                <p class="school">Irvine Valley College</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Linda Rose Hembreiker</h3>
+                <p class="instrument">Harp</p>
+                <p class="school">University of North Texas</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Claire Remland</h3>
+                <p class="instrument">String Bass (Principal)</p>
+                <p class="school">Cal State Long Beach</p>
+            </div>
+        </div>
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Carly Bunim</h3>
+                <p class="instrument">String Bass (Asst. Principal)</p>
+                <p class="school">Cal State Fullerton</p>
+            </div>
         </div>
     </div>
+
+    <!-- ARTIST IN RESIDENCE -->
+    <div class="section-label">2026 Artist in Residence</div>
+    <div class="musicians-grid">
+        <div class="musician-card">
+            <div class="musician-card-photo" style="background-image:url('https://placehold.co/220x293/262626/666?text=Photo');"></div>
+            <div class="musician-card-info">
+                <h3>Talla Khattat</h3>
+                <p class="instrument">Piano / Social Media Director</p>
+                <p class="school">UCLA / Irvine Valley College</p>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 <footer>
@@ -269,146 +624,10 @@
 </footer>
 
 <script>
-    // Mobile menu
     const btn = document.getElementById('mobileMenuBtn');
     const nav = document.getElementById('navLinks');
     btn.addEventListener('click', () => nav.classList.toggle('active'));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('active')));
-
-    // ================================================================
-    // MUSICIAN BIO DATA
-    // When you're ready to add real bios, fill in the data below.
-    // Each entry: photo URL, name, instrument, school, and 2 bio paragraphs.
-    // ================================================================
-    const musicians = {
-        'flute1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Flute',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio. Include their background, education, and musical experience.',
-            p2: 'Add more details here about their achievements, goals, or what they love about being part of the SoCal Music Collective.'
-        },
-        'flute2': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Flute',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'oboe1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Oboe',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'clar1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Bb Clarinet',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'sax1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Alto Saxophone',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'bsn1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Bassoon',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'trp1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Trumpet',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'hn1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'French Horn',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'trb1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Trombone',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'tba1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Tuba',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'perc1': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Percussion',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'perc2': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Percussion',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-        'perc3': {
-            photo: 'https://placehold.co/280x400/262626/666666?text=MUSICIAN+PHOTO',
-            name: 'Musician Name',
-            instrument: 'Timpani',
-            school: 'University Name',
-            p1: 'Replace this with the musician\'s bio.',
-            p2: 'Add more details here.'
-        },
-    };
-
-    function openBio(id) {
-        const m = musicians[id];
-        if (!m) return;
-        document.getElementById('bioPhoto').style.backgroundImage = `url('${m.photo}')`;
-        document.getElementById('bioName').textContent = m.name;
-        document.getElementById('bioRole').textContent = `${m.instrument} • ${m.school}`;
-        document.getElementById('bioParagraph1').textContent = m.p1;
-        document.getElementById('bioParagraph2').textContent = m.p2;
-        document.getElementById('bioOverlay').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeBio() {
-        document.getElementById('bioOverlay').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    function closeBioOnBg(e) {
-        if (e.target === document.getElementById('bioOverlay')) closeBio();
-    }
-
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBio(); });
 </script>
 </body>
 </html>
