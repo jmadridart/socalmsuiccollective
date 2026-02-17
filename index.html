@@ -24,7 +24,7 @@
 
         /* HERO */
         .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:8rem 2rem 4rem; position:relative; overflow:hidden; }
-        .hero-bg { position:absolute; inset:0; background-image:url(https://i.ibb.co/k6QkfZWg/Rectangle-4.jpg); background-size:cover; background-position:center; }
+        .hero-bg { position:absolute; inset:0; background-image:url('https://placehold.co/1920x1080/1a1a1a/555555?text=REPLACE+WITH+ORCHESTRA+PHOTO'); background-size:cover; background-position:center; }
         .hero-bg::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.65); }
         .hero-content { position:relative; z-index:1; max-width:900px; }
         .hero h1 { font-family:'Libre Baskerville',serif; font-size:clamp(2.5rem,7vw,5rem); font-weight:700; line-height:1.1; margin-bottom:1.5rem; letter-spacing:-0.02em; }
@@ -63,14 +63,14 @@
         .conductor-info .role { font-size:1rem; color:var(--gray-400); margin-bottom:2rem; }
         .conductor-info p { color:var(--gray-300); line-height:1.8; margin-bottom:1.25rem; font-size:1.05rem; }
 
-        /* MUSICIANS PREVIEW */
-        .musicians-preview { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
-        .musician-preview-card { background:var(--gray-900); border:1px solid var(--gray-800); overflow:hidden; cursor:pointer; transition:border-color 0.2s; text-decoration:none; color:var(--white); display:block; }
-        .musician-preview-card:hover { border-color:var(--gray-600); }
-        .musician-photo { width:100%; aspect-ratio:1; background-size:cover; background-position:center top; }
-        .musician-card-info { padding:1.25rem; }
-        .musician-card-info h4 { font-size:1.05rem; font-weight:600; margin-bottom:0.3rem; }
-        .musician-card-info p { font-size:0.9rem; color:var(--gray-400); }
+        /* MUSICIAN SPOTLIGHT */
+        .musician-spotlight { background:var(--gray-900); border:1px solid var(--gray-800); display:grid; grid-template-columns:300px 1fr; overflow:hidden; }
+        .spotlight-photo { background-image:url('https://placehold.co/300x400/262626/666666?text=ERIN+ELLYSHA+PHOTO'); background-size:cover; background-position:center top; min-height:400px; }
+        .spotlight-info { padding:3rem; display:flex; flex-direction:column; justify-content:center; }
+        .spotlight-info .eyebrow { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
+        .spotlight-info h3 { font-family:'Libre Baskerville',serif; font-size:2rem; margin-bottom:0.5rem; letter-spacing:-0.02em; }
+        .spotlight-info .role { font-size:1rem; color:var(--gray-400); margin-bottom:1.5rem; }
+        .spotlight-info p { color:var(--gray-300); line-height:1.8; margin-bottom:1rem; font-size:1rem; }
 
         /* SEASON */
         .season-content { background:var(--gray-900); padding:4rem; border:1px solid var(--gray-800); }
@@ -102,7 +102,7 @@
         .social-links a:hover { color:var(--white); }
 
         /* RESPONSIVE */
-        @media(max-width:1024px){ .musicians-preview{grid-template-columns:repeat(2,1fr);} }
+        @media(max-width:1024px){ }
         @media(max-width:968px){
             .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--black);padding:2rem;border-bottom:1px solid var(--gray-800);flex-direction:column;gap:1.5rem;}
             .nav-links.active{display:flex;}
@@ -110,9 +110,11 @@
             .about-content{grid-template-columns:1fr;}
             .conductor-preview{grid-template-columns:1fr;}
             .conductor-photo{min-height:300px;aspect-ratio:16/9;}
+            .musician-spotlight{grid-template-columns:1fr;}
+            .spotlight-photo{min-height:300px;aspect-ratio:16/9;}
             .season-content,.auditions{padding:2rem;}
         }
-        @media(max-width:640px){ section{padding:4rem 1.5rem;} .musicians-preview{grid-template-columns:repeat(2,1fr);} }
+        @media(max-width:640px){ section{padding:4rem 1.5rem;} }
     </style>
 </head>
 <body>
@@ -120,7 +122,7 @@
 <header>
     <nav>
         <!-- LOGO — swap text for <img src="YOUR-LOGO-URL"> once ready -->
-        <a href="index.html" class="logo"><img src="https://i.ibb.co/8DynYfKw/Asset-1-2x.png" alt="SoCal Music Collective" style="height:40px;"></a>
+        <a href="index.html" class="logo">SoCal Music Collective</a>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -129,7 +131,6 @@
             <li><a href="musicians.html">Musicians</a></li>
             <li><a href="watch-listen.html">Watch & Listen</a></li>
             <li><a href="#auditions">Auditions</a></li>
-            <li><a href="https://www.zeffy.com/en-US/donation-form/socal-music-collective-2026-season-fundraising" target="_blank" style="background:white; color:black; padding:0.4rem 1rem; font-weight:600;">Give</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
@@ -137,7 +138,7 @@
 
 <!-- HERO — replace photo URL with your orchestra image -->
 <div class="hero">
-    <div class="hero-bg" style="background-image:url(https://i.ibb.co/k6QkfZWg/Rectangle-4.jpg);"></div>
+    <div class="hero-bg" style="background-image:url('https://placehold.co/1920x1080/1a1a1a/555555?text=REPLACE+WITH+ORCHESTRA+PHOTO');"></div>
     <div class="hero-content">
         <h1>Where Musicians Become Artists</h1>
         <p class="tagline">Excellence in Wind Ensemble Performance</p>
@@ -172,7 +173,7 @@
 <!-- BRANDON PREVIEW — replace photo URL -->
 <section style="padding-top:0;">
     <div class="conductor-preview">
-        <div class="conductor-photo" style="background-image:url(https://i.ibb.co/v4d68zY3/BRANDON-MADRID.jpg);"></div>
+        <div class="conductor-photo" style="background-image:url('https://placehold.co/350x500/262626/666666?text=BRANDON+MADRID+PHOTO');"></div>
         <div class="conductor-info">
             <p class="eyebrow">Founder & Music Director</p>
             <h2>Brandon Madrid</h2>
@@ -184,29 +185,22 @@
     </div>
 </section>
 
-<!-- MUSICIANS PREVIEW — replace photo URLs and names -->
+<!-- MUSICIAN SPOTLIGHT -->
 <section>
     <div class="section-header">
-        <h2>Meet the Musicians</h2>
-        <p>Talented artists from across California and beyond</p>
+        <h2>Musician Spotlight</h2>
+        <p>Featuring guest soprano Erin Ellysha</p>
     </div>
-    <div class="musicians-preview">
-        <a href="musicians.html" class="musician-preview-card">
-            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
-            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
-        </a>
-        <a href="musicians.html" class="musician-preview-card">
-            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
-            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
-        </a>
-        <a href="musicians.html" class="musician-preview-card">
-            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
-            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
-        </a>
-        <a href="musicians.html" class="musician-preview-card">
-            <div class="musician-photo" style="background-image:url('https://placehold.co/400x400/262626/666666?text=MUSICIAN+PHOTO');"></div>
-            <div class="musician-card-info"><h4>Musician Name</h4><p>Instrument</p></div>
-        </a>
+    <div class="musician-spotlight">
+        <div class="spotlight-photo" style="background-image:url('https://placehold.co/300x400/262626/666666?text=ERIN+ELLYSHA+PHOTO');"></div>
+        <div class="spotlight-info">
+            <p class="eyebrow">2026 Season Guest Artist</p>
+            <h3>Erin Ellysha</h3>
+            <p class="role">Soprano • Goodnight Moon</p>
+            <p>Erin Ellysha is an accomplished vocalist and passionate performer from Southern California, whose musical experience spans over a decade of dedicated choral work.</p>
+            <p>While studying at the University of California, Irvine, Erin immersed herself in both the Theatre Department and the Vocal Performance program, graduating in 2024. As former board and Assistant Music Director of UCI's nationally recognized a cappella group, Vermillion Vocalists, her voice was featured on multiple award-winning recordings.</p>
+            <p>Now based near Denver, Colorado, Erin is pursuing a degree in Music at the University of Colorado, Denver, where she continues to refine her artistry and share her voice with new communities.</p>
+        </div>
     </div>
     <div style="text-align:center;margin-top:2.5rem;">
         <a href="musicians.html" class="btn btn-secondary">View All Musicians</a>
