@@ -13,7 +13,6 @@
         body { font-family:'Work Sans',sans-serif; background:var(--black); color:var(--white); line-height:1.6; overflow-x:hidden; }
         html { scroll-behavior:smooth; }
 
-        /* HEADER */
         header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.95); border-bottom:1px solid var(--gray-800); z-index:1000; padding:1.25rem 0; }
         nav { max-width:1400px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
         .logo img { height:50px; display:block; }
@@ -22,7 +21,6 @@
         .nav-links a:hover, .nav-links a.active { color:var(--white); }
         .mobile-menu-btn { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer; }
 
-        /* HERO */
         .hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:8rem 2rem 4rem; position:relative; overflow:hidden; }
         .hero-bg { position:absolute; inset:0; background-image:url('https://i.ibb.co/k6QkfZWg/Rectangle-4.jpg'); background-size:cover; background-position:center; }
         .hero-bg::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.65); }
@@ -31,20 +29,17 @@
         .hero .tagline { font-size:clamp(1rem,2vw,1.25rem); color:var(--gray-300); margin-bottom:3rem; letter-spacing:0.05em; text-transform:uppercase; }
         .cta-buttons { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
 
-        /* BUTTONS */
         .btn { padding:1rem 2rem; font-size:0.95rem; font-weight:500; text-decoration:none; transition:all 0.2s; letter-spacing:0.02em; cursor:pointer; border:1px solid; display:inline-block; font-family:'Work Sans',sans-serif; }
         .btn-primary { background:var(--white); color:var(--black); border-color:var(--white); }
         .btn-primary:hover { background:#e5e5e5; }
         .btn-secondary { background:transparent; color:var(--white); border-color:var(--white); }
         .btn-secondary:hover { background:var(--white); color:var(--black); }
 
-        /* SECTIONS */
         section { padding:6rem 2rem; max-width:1400px; margin:0 auto; }
         .section-header { text-align:center; margin-bottom:4rem; max-width:800px; margin-left:auto; margin-right:auto; }
         .section-header h2 { font-family:'Libre Baskerville',serif; font-size:clamp(2rem,4vw,3rem); font-weight:700; margin-bottom:1rem; letter-spacing:-0.02em; }
         .section-header p { font-size:1.1rem; color:var(--gray-400); line-height:1.7; }
 
-        /* ABOUT */
         .about-content { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; }
         .about-text { font-size:1.05rem; line-height:1.8; color:var(--gray-300); }
         .about-text p { margin-bottom:1.5rem; }
@@ -54,16 +49,14 @@
         .stat-number { font-family:'Libre Baskerville',serif; font-size:3rem; font-weight:700; display:block; margin-bottom:0.5rem; }
         .stat-label { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.1em; text-transform:uppercase; }
 
-        /* BRANDON PREVIEW */
         .conductor-preview { background:var(--gray-900); border:1px solid var(--gray-800); display:grid; grid-template-columns:350px 1fr; overflow:hidden; }
-        .conductor-photo { background-image:url('https://i.ibb.co/LdgXfp5x/brandon.jpg'); background-size:cover; background-position:center top; min-height:450px; }
+        .conductor-photo { background-image:url('https://i.ibb.co/v4d68zY3/BRANDON-MADRID.jpg'); background-size:cover; background-position:center top; min-height:450px; }
         .conductor-info { padding:3rem; display:flex; flex-direction:column; justify-content:center; }
         .conductor-info .eyebrow { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem; }
         .conductor-info h2 { font-family:'Libre Baskerville',serif; font-size:2.5rem; margin-bottom:0.5rem; letter-spacing:-0.02em; }
         .conductor-info .role { font-size:1rem; color:var(--gray-400); margin-bottom:2rem; }
         .conductor-info p { color:var(--gray-300); line-height:1.8; margin-bottom:1.25rem; font-size:1.05rem; }
 
-        /* MUSICIAN SPOTLIGHT */
         .spotlight { background:var(--gray-900); border:1px solid var(--gray-800); display:grid; grid-template-columns:350px 1fr; overflow:hidden; }
         .spotlight-photo { background-image:url('https://i.ibb.co/TCFrNqq/spotlight.jpg'); background-size:cover; background-position:center top; min-height:450px; }
         .spotlight-info { padding:3rem; display:flex; flex-direction:column; justify-content:center; }
@@ -72,7 +65,6 @@
         .spotlight-info .role { font-size:1rem; color:var(--gray-400); margin-bottom:2rem; }
         .spotlight-info p { color:var(--gray-300); line-height:1.8; margin-bottom:1.25rem; font-size:1.05rem; }
 
-        /* SEASON */
         .season-content { background:var(--gray-900); padding:4rem; border:1px solid var(--gray-800); }
         .season-description { font-size:1.05rem; line-height:1.9; color:var(--gray-300); margin-bottom:3rem; }
         .program-item { padding:2rem 0; border-top:1px solid var(--gray-800); }
@@ -80,7 +72,6 @@
         .program-item .composer { font-size:1rem; color:var(--gray-400); margin-bottom:1rem; font-style:italic; }
         .program-item p { color:var(--gray-300); line-height:1.8; }
 
-        /* AUDITIONS */
         .auditions { background:var(--gray-900); border:1px solid var(--gray-700); padding:4rem; text-align:center; }
         .auditions h2 { font-family:'Libre Baskerville',serif; font-size:2.5rem; margin-bottom:1rem; }
         .auditions > p { font-size:1.1rem; color:var(--gray-400); margin-bottom:3rem; }
@@ -93,7 +84,6 @@
         .audition-info { margin:2rem 0; padding:2rem; background:var(--black); border:1px solid var(--gray-800); text-align:left; }
         .audition-info p { color:var(--gray-300); line-height:1.8; }
 
-        /* FOOTER */
         footer { background:var(--black); padding:4rem 2rem; border-top:1px solid var(--gray-800); }
         .footer-content { max-width:1400px; margin:0 auto; text-align:center; }
         footer p { color:var(--gray-400); margin-bottom:0.5rem; font-size:0.95rem; }
@@ -101,7 +91,6 @@
         .social-links a { color:var(--gray-400); text-decoration:none; transition:color 0.2s; }
         .social-links a:hover { color:var(--white); }
 
-        /* RESPONSIVE */
         @media(max-width:968px){
             .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--black);padding:2rem;border-bottom:1px solid var(--gray-800);flex-direction:column;gap:1.5rem;}
             .nav-links.active{display:flex;}
@@ -119,7 +108,7 @@
 <header>
     <nav>
         <a href="index.html" class="logo">
-            <img src="https://i.ibb.co/zh3W6Bng/logo.png" alt="SoCal Music Collective">
+            <img src="https://i.ibb.co/8DynYfKw/Asset-1-2x.png" alt="SoCal Music Collective">
         </a>
         <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">Home</a></li>
@@ -129,12 +118,12 @@
             <li><a href="musicians.html">Musicians</a></li>
             <li><a href="watch-listen.html">Watch & Listen</a></li>
             <li><a href="#auditions">Auditions</a></li>
+            <li><a href="https://www.zeffy.com/en-US/donation-form/socal-music-collective-2026-season-fundraising" target="_blank" style="background:white;color:black;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600;">Give</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
 </header>
 
-<!-- HERO -->
 <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
@@ -147,7 +136,6 @@
     </div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
     <div class="section-header">
         <h2>About the Collective</h2>
@@ -168,7 +156,6 @@
     </div>
 </section>
 
-<!-- BRANDON PREVIEW -->
 <section style="padding-top:0;">
     <div class="conductor-preview">
         <div class="conductor-photo"></div>
@@ -183,7 +170,6 @@
     </div>
 </section>
 
-<!-- MUSICIAN SPOTLIGHT -->
 <section>
     <div class="section-header">
         <h2>Featured Artist</h2>
@@ -202,7 +188,6 @@
     </div>
 </section>
 
-<!-- 2026 SEASON -->
 <section id="season">
     <div class="section-header">
         <h2>Echoes — 2026 Season</h2>
@@ -228,7 +213,6 @@
     </div>
 </section>
 
-<!-- AUDITIONS -->
 <section id="auditions">
     <div class="auditions">
         <h2>2026 Season Auditions Open</h2>
