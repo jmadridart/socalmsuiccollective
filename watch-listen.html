@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --black:#000; --white:#fff; --gray-300:#d4d4d4; --gray-400:#a3a3a3; --gray-600:#525252; --gray-700:#404040; --gray-800:#262626; --gray-900:#171717; }
+        :root { --black:#000; --white:#fff; --orange:#ff6b35; --gray-300:#d4d4d4; --gray-400:#a3a3a3; --gray-600:#525252; --gray-700:#404040; --gray-800:#262626; --gray-900:#171717; }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Work Sans',sans-serif; background:var(--black); color:var(--white); line-height:1.6; overflow-x:hidden; }
 
@@ -17,7 +17,7 @@
         .logo { font-size:1.25rem; font-weight:600; letter-spacing:-0.02em; color:var(--white); text-decoration:none; }
         .nav-links { display:flex; gap:2rem; list-style:none; }
         .nav-links a { color:var(--gray-400); text-decoration:none; font-size:0.95rem; transition:color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color:var(--white); }
+        .nav-links a:hover, .nav-links a.active { color:var(--orange); }
         .mobile-menu-btn { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer; }
 
         .page-header { padding:8rem 2rem 4rem; text-align:center; background:linear-gradient(to bottom,var(--black),var(--gray-900)); }
@@ -53,15 +53,17 @@
 
 <header>
     <nav>
-        <a href="index.html" class="logo">SoCal Music Collective</a>
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/8DynYfKw/Asset-1-2x.png" alt="SoCal Music Collective" style="height:50px;">
+        </a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#season">2026 Season</a></li>
             <li><a href="brandon-madrid.html">Brandon Madrid</a></li>
             <li><a href="musicians.html">Musicians</a></li>
             <li><a href="watch-listen.html" class="active">Watch & Listen</a></li>
             <li><a href="index.html#auditions">Auditions</a></li>
+            <li><a href="https://www.zeffy.com/en-US/donation-form/socal-music-collective-2026-season-fundraising" target="_blank" style="background:#ff6b35;color:white;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600;">Give</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
