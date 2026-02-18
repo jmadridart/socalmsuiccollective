@@ -8,20 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --black:#000; --white:#fff; --gray-300:#d4d4d4; --gray-400:#a3a3a3; --gray-600:#525252; --gray-700:#404040; --gray-800:#262626; --gray-900:#171717; }
+        :root { --black:#000; --white:#fff; --orange:#ff6b35; --gray-300:#d4d4d4; --gray-400:#a3a3a3; --gray-600:#525252; --gray-700:#404040; --gray-800:#262626; --gray-900:#171717; }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Work Sans',sans-serif; background:var(--black); color:var(--white); line-height:1.6; overflow-x:hidden; }
         html { scroll-behavior:smooth; }
 
         header { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.95); border-bottom:1px solid var(--gray-800); z-index:1000; padding:1.25rem 0; }
         nav { max-width:1400px; margin:0 auto; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
-        .logo { font-size:1.25rem; font-weight:600; letter-spacing:-0.02em; color:var(--white); text-decoration:none; }
+        .logo img { height:50px; display:block; }
         .nav-links { display:flex; gap:2rem; list-style:none; }
         .nav-links a { color:var(--gray-400); text-decoration:none; font-size:0.95rem; transition:color 0.2s; }
-        .nav-links a:hover, .nav-links a.active { color:var(--white); }
+        .nav-links a:hover, .nav-links a.active { color:var(--orange); }
         .mobile-menu-btn { display:none; background:none; border:none; color:var(--white); font-size:1.5rem; cursor:pointer; }
 
-        /* HERO - full bleed photo with overlay */
         .bio-hero {
             height: 90vh;
             position: relative;
@@ -29,10 +28,9 @@
             align-items: flex-end;
             overflow: hidden;
         }
-        /* REPLACE this URL with Brandon's best photo */
         .bio-hero-bg {
             position: absolute; inset: 0;
-            background-image: url('https://placehold.co/1920x1080/1a1a1a/555555?text=REPLACE+WITH+BRANDON+CONDUCTING+PHOTO');
+            background-image: url('https://i.ibb.co/HfpSHYsk/hero-background.jpg');
             background-size: cover;
             background-position: center top;
         }
@@ -52,7 +50,6 @@
         .bio-hero-content h1 { font-family:'Libre Baskerville',serif; font-size:clamp(3rem,7vw,5.5rem); font-weight:700; letter-spacing:-0.02em; line-height:1; margin-bottom:1rem; }
         .bio-hero-content .title { font-size:1.25rem; color:var(--gray-300); }
 
-        /* BIO CONTENT */
         .bio-content-section {
             max-width: 1400px;
             margin: 0 auto;
@@ -62,16 +59,14 @@
             gap: 5rem;
             align-items: start;
         }
-        .bio-text h2 { font-family:'Libre Baskerville',serif; font-size:1.5rem; margin-bottom:2rem; color:var(--gray-300); font-weight:400; letter-spacing:0.05em; text-transform:uppercase; }
+        .bio-text h2 { font-family:'Libre Baskerville',serif; font-size:1.5rem; margin-bottom:2rem; color:var(--gray-300); font-weight:400; letter-spacing:0.05em; text-transform:uppercase; border-bottom:2px solid var(--orange); padding-bottom:0.75rem; }
         .bio-text p { font-size:1.1rem; color:var(--gray-300); line-height:1.9; margin-bottom:1.75rem; }
 
-        /* SIDEBAR */
         .bio-sidebar {}
         .sidebar-photo {
             width: 100%;
             aspect-ratio: 3/4;
-            /* REPLACE with a second photo of Brandon — maybe more casual/portrait */
-            background-image: url('https://placehold.co/350x467/262626/666666?text=BRANDON+PORTRAIT+PHOTO');
+            background-image: url('https://i.ibb.co/JwbjpyJw/brandon-portrait.jpg');
             background-size: cover;
             background-position: center top;
             margin-bottom: 2rem;
@@ -79,14 +74,14 @@
         .sidebar-links { border-top: 1px solid var(--gray-800); padding-top: 2rem; }
         .sidebar-links h3 { font-size:0.85rem; color:var(--gray-400); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.5rem; }
         .sidebar-links a { display:block; color:var(--white); text-decoration:none; margin-bottom:1rem; font-size:1rem; transition:color 0.2s; border-bottom:1px solid var(--gray-800); padding-bottom:1rem; }
-        .sidebar-links a:hover { color:var(--gray-400); }
+        .sidebar-links a:hover { color:var(--orange); }
 
         footer { background:var(--black); padding:4rem 2rem; border-top:1px solid var(--gray-800); }
         .footer-content { max-width:1400px; margin:0 auto; text-align:center; }
         footer p { color:var(--gray-400); margin-bottom:0.5rem; font-size:0.95rem; }
         .social-links { display:flex; gap:2rem; justify-content:center; margin-top:2rem; }
         .social-links a { color:var(--gray-400); text-decoration:none; transition:color 0.2s; }
-        .social-links a:hover { color:var(--white); }
+        .social-links a:hover { color:var(--orange); }
 
         @media(max-width:968px){
             .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:var(--black);padding:2rem;border-bottom:1px solid var(--gray-800);flex-direction:column;gap:1.5rem;}
@@ -102,23 +97,24 @@
 
 <header>
     <nav>
-        <a href="index.html" class="logo">SoCal Music Collective</a>
+        <a href="index.html" class="logo">
+            <img src="https://i.ibb.co/8DynYfKw/Asset-1-2x.png" alt="SoCal Music Collective">
+        </a>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li><a href="index.html#season">2026 Season</a></li>
             <li><a href="brandon-madrid.html" class="active">Brandon Madrid</a></li>
             <li><a href="musicians.html">Musicians</a></li>
             <li><a href="watch-listen.html">Watch & Listen</a></li>
             <li><a href="index.html#auditions">Auditions</a></li>
+            <li><a href="https://www.zeffy.com/en-US/donation-form/socal-music-collective-2026-season-fundraising" target="_blank" style="background:#ff6b35;color:white;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600;">Give</a></li>
         </ul>
         <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
     </nav>
 </header>
 
-<!-- HERO — replace with Brandon's best conducting/performance photo -->
 <div class="bio-hero">
-    <div class="bio-hero-bg" style="background-image:url('https://placehold.co/1920x1080/1a1a1a/555555?text=REPLACE+WITH+BRANDON+CONDUCTING+PHOTO');"></div>
+    <div class="bio-hero-bg"></div>
     <div class="bio-hero-content">
         <p class="eyebrow">Founder & Music Director</p>
         <h1>Brandon Madrid</h1>
@@ -126,20 +122,24 @@
     </div>
 </div>
 
-<!-- BIO CONTENT -->
 <div class="bio-content-section">
     <div class="bio-text">
         <h2>About</h2>
-        <p>Brandon Madrid is a passionate conductor and music educator dedicated to creating transformative musical experiences. In Spring 2025, he founded the SoCal Music Collective with a bold vision: to create a space where musicians could challenge themselves, grow, and ultimately become the best artists they can be.</p>
-        <p>What began as an opportunity for Brandon to gain conducting experience quickly evolved into a collaborative community built on passion, mentorship, and a shared love for music. The ensemble's debut concert, Legacy, reflected this spirit—honoring the music and leaders who've shaped us while paving the way for new voices to rise.</p>
-        <p>Through the SoCal Music Collective, Brandon is not only carving out his path as a conductor but building a space where musicians can develop their artistry, collaborate meaningfully, and connect deeply with the rich traditions of wind ensemble performance.</p>
-        <p>His leadership style emphasizes mentorship, artistic growth, and the belief that music has the power to unite and inspire. Brandon handpicks each member of the ensemble, selecting musicians not only for their technical skill but for their dedication, passion, and collaborative spirit.</p>
-        <p>Under his direction, the SoCal Music Collective has grown from an idea into a thriving ensemble that draws musicians from across California and beyond—united by a shared commitment to excellence and a love for the art form.</p>
+        <p>Brandon Madrid is a Spanish-American clarinetist, violist, conductor, and composer currently studying at both the Colburn School in Los Angeles and Irvine Valley College. He was recently appointed Principal Clarinet of the IVC Wind Symphony under the direction of Mathieu Girardet and also performs with the Gold Wind Symphony, a premier honor ensemble based in Southern California. As a versatile and passionate performer, Brandon has appeared across the United States and collaborated with esteemed artists such as Sorah Myung, Charles Peltz, and Cristian Fatu.</p>
+        
+        <p>Brandon's musical journey began in elementary school with the trumpet and clarinet, later deepened by symphonic outings with his grandmother and hours of listening to KUSC. A pivotal moment came when he experienced a live performance of Stravinsky's Firebird Suite at the Renee and Henry Segerstrom Concert Hall—an event that sparked his lifelong commitment to orchestral music.</p>
+        
+        <p>In high school, Brandon served as Principal Violist for four years and Principal Clarinet/Concertmaster of the Newport Harbor Wind Ensemble for two. He co-founded the Newport Harbor Quarterman Quintet with director Andy Julian, performing extensively across Orange County and on national tours to Washington, D.C., and Boston. He also worked as a student assistant and music librarian. His leadership and musicianship earned him the Director's Award for Wind Ensemble, the NHHS Fine Arts Department Award and Scholarship, and top honors at every Solo and Ensemble Festival in which he participated.</p>
+        
+        <p>Currently, Brandon studies orchestral conducting with Eleanor Núñez at the Colburn School and continues private clarinet studies with the legendary Mathieu Girardet. He has also worked closely with teachers, including Sarah Grenier, Si Tran (viola), and Cristian Fatu.</p>
+        
+        <p>In 2025, Brandon will take part in the UCLA Summer Conducting Workshop, where he will work under Mallory Thompson and Travis Cross. He also serves as the Founding Artistic Director and Conductor of the SoCal Music Collective, a college-professional wind ensemble dedicated to high-level artistry and meaningful collaboration among emerging musicians.</p>
+        
+        <p>Brandon is passionate about using music to tell stories, amplify underrepresented voices, and build spaces of deep connection through expressive, community-driven performance.</p>
     </div>
 
     <div class="bio-sidebar">
-        <!-- REPLACE with a portrait/headshot of Brandon -->
-        <div class="sidebar-photo" style="background-image:url('https://placehold.co/350x467/262626/666666?text=BRANDON+PORTRAIT+PHOTO');"></div>
+        <div class="sidebar-photo"></div>
 
         <div class="sidebar-links">
             <h3>Get Involved</h3>
